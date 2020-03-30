@@ -1,0 +1,18 @@
+services:
+    symptoma.covid19.controller:
+        class: symptoma\covid19\controller\main
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@template'
+            - '@user'
+
+    symptoma.covid19.listener:
+        class: symptoma\covid19\event\main_listener
+        arguments:
+            - '@controller.helper'
+            - '@template'
+            - '@user'
+            - '%core.php_ext%'
+        tags:
+            - { name: event.listener }

@@ -1,0 +1,36 @@
+{
+    "name": "symptoma/covid19",
+    "type": "phpbb-extension",
+    "description": "This Chatbot can test Covid19 against 200.000 other disease and help stop the pandemia.",
+    "homepage": "",
+    "version": "1.0.0-dev",
+    "time": "2020-03-27",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Thomas Lutz",
+            "email": "lutz@symptoma.com",
+            "homepage": "https://symptoma.com",
+            "role": "CTO"
+        },
+        {
+            "name": "Helmuth Lammer",
+            "email": "lammer@symptoma.com",
+            "homepage": "https://symptoma.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "display-name": "Symptoma Covid19 Chatbot",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.4,<3.2.0@dev"
+        }
+    },
+    "require-dev": {
+        "phing/phing": "2.4.*"
+    }
+}
