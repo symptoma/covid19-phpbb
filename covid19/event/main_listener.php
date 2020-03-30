@@ -110,11 +110,11 @@ class main_listener implements EventSubscriberInterface
             // Store display_vars event in a local variable
             $display_vars = $event['display_vars'];
 
-            $maxLegendIndex = $this->getMaxLegendIndex($display_vars);
+            $max_legend_index = $this->get_max_legend_index($display_vars);
 
             // Define new config vars in legend box
             $sc_option_variables = array(
-                'legend'.$maxLegendIndex => 'SC_OPTION_LEGEND',
+                'legend'.$max_legend_index => 'SC_OPTION_LEGEND',
                 'symptoma_covid19_introttext' => array('lang' => 'SC_OPTION_INTROTEXT', 'validate' => 'text:40:255', 'type' => 'text:40:255', 'explain' => true),
                 'symptoma_covid19_elevation' => array('lang' => 'SC_OPTION_ELEVATION', 'validate' => 'int:0:9999', 'type' => 'number:0:9999', 'explain' => true),
                 'symptoma_covid19_height' => array('lang' => 'SC_OPTION_HEIGHT', 'validate' => 'int:0:9999', 'type' => 'number:0:9999', 'explain' => true, 'append'=> ' px'),
@@ -127,11 +127,13 @@ class main_listener implements EventSubscriberInterface
         }
     }
 
-    private function getMaxLegendIndex(array $displayVars){
+    private function get_max_legend_index(array $displayVars){
 	    $legendIndex  = 0;
 
-        foreach($displayVars['vars'] as $key => $value){
-            if(substr($key,0,6) == "legend"){
+        foreach($displayVars['vars'] as $key => $value)
+        {
+            if(substr($key,0,6) == "legend")
+            {
                 $legendIndex++;
             }
         }
