@@ -19,14 +19,8 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-
-    'SC_OPTION_LEGEND'          => 'COVID-19 Anzeige Optionen',
-    'SC_OPTION_INTROTEXT'       => 'Chatbot Begrüßung',
-    'SC_OPTION_ELEVATION'       => 'Richtebene',
-    'SC_OPTION_HEIGHT'          => 'Höhe',
-    'SC_OPTION_WIDTH'           => 'Breite',
-    'SC_OPTION_INTROTEXT_EXPLAIN'       => 'Individuelle Begrüßungsnachricht, wenn der Chat startet',
-    'SC_OPTION_ELEVATION_EXPLAIN'       => 'z-index, anpassen, wenn der Chatbot ganz oder teilweise verdeckt ist',
-    'SC_OPTION_HEIGHT_EXPLAIN'          => 'Fentsterhöhe',
-    'SC_OPTION_WIDTH_EXPLAIN'           => 'Fensterbreite'
+    'SC_BANNER_TITLE' => 'COVID-19',
+    'SC_BANNER_SUBTITLE' => 'INfo',
+    'SC_BANNER_LINK_TEXT' => 'Test starten',
+    'SC_BANNER_LINK_URL' =>'https://www.symptoma.com/covid-19'
 ));

@@ -41,24 +41,6 @@ class main
 		$this->helper = $helper;
 		$this->template = $template;
 		$this->user = $user;
-
-        $this->predefineConfig();
 	}
 
-	private function predefineConfig()
-    {
-
-        if (!isset($this->config['symptoma_covid19_introttext'])) {
-            $this->config['symptoma_covid19_introttext'] = "Hallo, hier schreibt Symptoma, Partner vom Magazin Seltene Krankheiten.";
-        }
-        if (!isset($this->config['symptoma_covid19_elevation'])) {
-            $this->config['symptoma_covid19_elevation'] = 1000;
-        }
-        if (!isset($this->config['symptoma_covid19_height'])) {
-            $this->config['symptoma_covid19_height'] = 600;
-        }
-        if (!isset($this->config['symptoma_covid19_width'])) {
-            $this->config['symptoma_covid19_width'] = 450;
-        }
-    }
 }
